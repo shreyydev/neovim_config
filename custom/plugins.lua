@@ -8,6 +8,16 @@ local plugins = {
     }
   },
   {
+    "NvChad/nvterm",
+    config = function(_, opts)
+      require("nvterm").setup(vim.tbl_deep_extend("force", opts, {
+        terminals = {
+          shell = "C:\\Users\\shrey\\.cargo\\bin\\nu.exe"
+        }
+      }))
+    end,
+  },
+  {
     "neovim/nvim-lspconfig",
     config = function()
       require "plugins.configs.lspconfig"
